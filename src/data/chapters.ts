@@ -11,7 +11,9 @@
 //     volumeId: getVolumeWrapperId(e),
 // })), undefined, 2)
 
-export const CHAPTER_DATA = [
+import type { ChapterData } from "../types";
+
+export const CHAPTER_DATA: ChapterData[] = [
   {
     chapterIndex: 0,
     chapterLink: "https://wanderinginn.com/2017/03/03/rw1-00/",
