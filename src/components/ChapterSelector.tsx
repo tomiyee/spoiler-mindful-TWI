@@ -1,9 +1,8 @@
-import { useState } from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
-import type { ChapterData } from "../types";
 import { CHAPTER_DATA } from "../data/chapters";
 import { VOLUME_DATA } from "../data/volumes";
+import { useSelectedChapter } from "../hooks/useSelectedChapter";
 
 const options = CHAPTER_DATA.slice().sort((a, b) => {
   const volCmp = a.volumeId.localeCompare(b.volumeId, undefined, {
@@ -13,7 +12,7 @@ const options = CHAPTER_DATA.slice().sort((a, b) => {
 });
 
 export function ChapterSelector() {
-  const [value, setValue] = useState<ChapterData | null>(null);
+  const [value, setValue] = useSelectedChapter();
 
   return (
     <Autocomplete
