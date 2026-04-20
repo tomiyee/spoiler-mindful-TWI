@@ -1,8 +1,8 @@
 # Spoiler-Mindful TWI Wiki
 
-A spoiler-safe companion for [The Wandering Inn](https://wanderinginn.com/) — one of the longest web novels ever written. Select the chapter you're currently reading and get information scoped to what you've already seen, with no spoilers beyond your progress.
+A spoiler-safe companion for [The Wandering Inn](https://wanderinginn.com/) — a really long, on-going web novel. Select the chapter you're currently reading and get information scoped to what you've already seen, with no spoilers beyond your progress.
 
-Live at: https://tommysengheng.github.io/spoiler-mindful-TWI/
+Live at: https://tomiyee.github.io/spoiler-mindful-TWI/
 
 ## Stack
 
