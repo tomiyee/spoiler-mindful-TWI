@@ -3,6 +3,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import type { ChapterData } from "../types";
 import { CHAPTER_DATA } from "../data/chapters";
+import { VOLUME_DATA } from "../data/volumes";
 
 const options = CHAPTER_DATA.slice().sort((a, b) => {
   const volCmp = a.volumeId.localeCompare(b.volumeId, undefined, {
@@ -20,7 +21,7 @@ export function ChapterSelector() {
       value={value}
       onChange={(_, newValue) => setValue(newValue)}
       getOptionLabel={(option) => option.chapterName}
-      groupBy={(option) => option.volumeId}
+      groupBy={(option) => VOLUME_DATA[option.volumeId].name}
       renderInput={(params) => <TextField {...params} label="Chapter" />}
     />
   );
