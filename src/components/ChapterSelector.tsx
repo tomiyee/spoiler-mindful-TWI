@@ -16,6 +16,7 @@ export function ChapterSelector() {
 
   return (
     <Autocomplete
+      size="small"
       options={options}
       value={value}
       onChange={(_, newValue) => setValue(newValue)}

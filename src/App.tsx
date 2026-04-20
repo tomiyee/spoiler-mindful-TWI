@@ -1,12 +1,8 @@
 import { useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
-import { ChapterSelector } from "./components/ChapterSelector";
+import { NavBar } from "./components/NavBar";
 import "./App.css";
 
 function App() {
@@ -14,26 +10,7 @@ function App() {
 
   return (
     <>
-      <AppBar
-        position="static"
-        sx={{
-          position: "relative",
-          left: "50%",
-          right: "50%",
-          ml: "-50vw",
-          mr: "-50vw",
-          width: "100vw",
-        }}
-      >
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Spoiler Mindful TWI
-          </Typography>
-          <Box sx={{ width: 300 }}>
-            <ChapterSelector />
-          </Box>
-        </Toolbar>
-      </AppBar>
+      <NavBar />
 
       <section id="center">
         <div className="hero">
