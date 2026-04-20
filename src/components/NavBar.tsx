@@ -2,7 +2,11 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { ChapterSelector } from "./ChapterSelector";
+import { lazy, Suspense } from "react";
+
+const ChapterSelector = lazy(() =>
+  import("./ChapterSelector").then((m) => ({ default: m.ChapterSelector }))
+);
 
 export function NavBar() {
   return (
@@ -22,7 +26,9 @@ export function NavBar() {
           Spoiler Mindful TWI
         </Typography>
         <Box sx={{ width: 300 }}>
-          <ChapterSelector />
+          <Suspense fallback={<Box sx={{ width: 300 }} />}>
+            <ChapterSelector />
+          </Suspense>
         </Box>
       </Toolbar>
     </AppBar>
