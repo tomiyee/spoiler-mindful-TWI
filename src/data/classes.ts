@@ -1,6 +1,6 @@
 import type { ClassData } from "../types";
 
-export const CLASS_DATA: ClassData[] = [
+export const CLASS_DATA = [
   {
     classId: "innkeeper",
     className: "[Innkeeper]",
@@ -66,4 +66,6 @@ export const CLASS_DATA: ClassData[] = [
     className: "[Mage]",
     introducedAtChapterIndex: 9,
   },
-];
+] as const satisfies ClassData[];
+
+export type ClassId = (typeof CLASS_DATA)[number]["classId"];
