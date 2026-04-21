@@ -1,0 +1,69 @@
+import type { ClassData } from "../types";
+
+export const CLASS_DATA: ClassData[] = [
+  {
+    classId: "innkeeper",
+    className: "[Innkeeper]",
+    introducedAtChapterIndex: 0,
+  },
+  {
+    classId: "chieftain",
+    className: "[Chieftain]",
+    introducedAtChapterIndex: 2,
+  },
+  {
+    classId: "shaman",
+    className: "[Shaman]",
+    introducedAtChapterIndex: 3,
+  },
+  {
+    classId: "guardswoman",
+    className: "[Guardswoman]",
+    introducedAtChapterIndex: 5,
+  },
+  {
+    classId: "guard",
+    className: "[Guard]",
+    introducedAtChapterIndex: 7,
+  },
+  {
+    classId: "spearmaster",
+    className: "[Spearmaster]",
+    introducedAtChapterIndex: 7,
+  },
+  {
+    classId: "gatherer",
+    className: "[Gatherer]",
+    introducedAtChapterIndex: 7,
+  },
+  {
+    classId: "necromancer",
+    className: "[Necromancer]",
+    introducedAtChapterIndex: 9,
+  },
+  {
+    classId: "wizard",
+    className: "[Wizard]",
+    introducedAtChapterIndex: 9,
+  },
+  {
+    classId: "sorcerers",
+    className: "[Sorcerers]",
+    introducedAtChapterIndex: 9,
+  },
+  {
+    classId: "warlocks",
+    className: "[Warlocks]",
+    introducedAtChapterIndex: 9,
+  },
+  {
+    classId: "witches",
+    className: "[Witches]",
+    introducedAtChapterIndex: 9,
+  },
+  {
+    classId: "mage",
+    className: "[Mage]",
+    introducedAtChapterIndex: 9,
+  },
+];
