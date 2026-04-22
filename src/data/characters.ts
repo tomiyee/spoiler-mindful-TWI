@@ -6,16 +6,16 @@ export const CHARACTER_DATA: CharacterData[] = [
     name: "Erin Solstice",
     introducedAtChapterIndex: 0,
     imageUrls: [],
-    classes: {
-      0: [{ classId: "innkeeper", level: "1" }],
-      4: [{ classId: "innkeeper", level: "4" }],
-    },
-    skills: {
-      0: ["basic-cooking", "basic-cleaning"],
-    },
-    occupations: {},
-    residences: {
-      0: ["an abandoned inn"],
-    },
+    classes: [
+      { chapterId: 0, value: [{ classId: "innkeeper", level: "1" }] },
+      { chapterId: 4, value: [{ classId: "innkeeper", level: "4" }] },
+    ],
+    skills: [
+      { chapterId: 0, value: ["basic-cooking", "basic-cleaning"] },
+    ],
+    occupations: [],
+    residences: [
+      { chapterId: 0, value: ["an abandoned inn"] },
+    ],
   },
 ];

@@ -11,6 +11,9 @@ const SkillsPage = lazy(() =>
 const ClassesPage = lazy(() =>
   import("./pages/ClassesPage").then((m) => ({ default: m.ClassesPage }))
 );
+const CharactersPage = lazy(() =>
+  import("./pages/CharactersPage").then((m) => ({ default: m.CharactersPage }))
+);
 
 function HomePage() {
   return (
@@ -37,6 +40,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/classes" element={<ClassesPage />} />
+          <Route path="/characters" element={<CharactersPage />} />
         </Routes>
       </Suspense>
     </>

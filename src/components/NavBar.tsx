@@ -38,6 +38,9 @@ export function NavBar() {
         <Button color="inherit" component={RouterLink} to="/classes">
           Classes
         </Button>
+        <Button color="inherit" component={RouterLink} to="/characters">
+          Characters
+        </Button>
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ width: 300 }}>
           <Suspense fallback={<Box sx={{ width: 300 }} />}>

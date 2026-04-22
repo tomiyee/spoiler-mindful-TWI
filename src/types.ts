@@ -28,7 +28,15 @@ export type ClassData = {
   introducedAtChapterIndex: number;
 };
 
-export type ChapterScoped<T> = Partial<Record<number, T>>;
+export type ChapterId = number;
+
+export type Revision<T> = {
+  value: T;
+  chapterId: ChapterId;
+};
+
+// Revisions must be sorted in ascending chapterId order.
+export type RevisionSeries<T> = Revision<T>[];
 
 export type CharacterClassEntry = {
   classId: ClassId;
@@ -40,8 +48,8 @@ export type CharacterData = {
   name: string;
   introducedAtChapterIndex: number;
   imageUrls: string[];
-  classes: ChapterScoped<CharacterClassEntry[]>;
-  skills: ChapterScoped<SkillId[]>;
-  occupations: ChapterScoped<string[]>;
-  residences: ChapterScoped<string[]>;
+  classes: RevisionSeries<CharacterClassEntry[]>;
+  skills: RevisionSeries<SkillId[]>;
+  occupations: RevisionSeries<string[]>;
+  residences: RevisionSeries<string[]>;
 };

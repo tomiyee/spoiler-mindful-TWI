@@ -1,6 +1,6 @@
 import type { SkillData } from "../types";
 
-export const SKILL_DATA: SkillData[] = [
+export const SKILL_DATA = [
   {
     skillId: "basic-cleaning",
     skillName: "[Basic Cleaning]",
@@ -36,4 +36,6 @@ export const SKILL_DATA: SkillData[] = [
     wikiLink: "https://wiki.wanderinginn.com/Detect_Guilt",
     introducedAtChapterIndex: 9,
   },
-];
+] as const satisfies SkillData[];
+
+export type SkillId = (typeof SKILL_DATA)[number]["skillId"];
